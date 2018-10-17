@@ -29,4 +29,4 @@ mergeDf <- merge(MergedData, otherDf, by = "stateName")     #merging columns of 
 mergeDf
 
 mergeDf$stateName <- tolower(mergeDf$stateName)     #converting all state names to lower case because R cannot process capital letters
-View(mergeDf)
+mergeDf
