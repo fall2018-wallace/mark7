@@ -6,6 +6,7 @@ ArrestsData <- USArrests
 
 
 
+
 ArrestsData=cbind(rownames(ArrestsData),ArrestsData) #Combine sequence of dataframe by rows or columns
 colnames(ArrestsData)=c("stateName") #Giving name to the new column
 ArrestsData
@@ -17,7 +18,7 @@ MergedData
 
 #2)	Add the area of each state, and the center of each state, to the merged dataframe, 
 #using the ‘state.center’, ‘state.center’ and ‘state.name’ vectors
-stateName <- CensusData.name     #getting all state names
+stateName <- dfCleanCensus.name     #getting all state names
 stateArea<-CensusData.area      #getting all state areas
 stateCenter <- CensusData.center     #getting coordinates of the centers of all states
 
