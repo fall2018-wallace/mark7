@@ -9,7 +9,7 @@ ArrestsData <- USArrests
 
 ArrestsData=cbind(rownames(ArrestsData),ArrestsData) #Combine sequence of dataframe by rows or columns
 colnames(ArrestsData)=c("stateName") #Giving name to the new column
-ArrestsData
+#ArrestsData
 
 #	Create a merged dataframe -- with the attributes from both dataframes
 MergedData=merge(ArrestsData,CensusData,by="stateName") #merging the two dataframes on concolumn name "stateName"
@@ -23,7 +23,7 @@ stateArea<-state.area      #getting all state areas
 stateCenter <- state.center     #getting coordinates of the centers of all states
 
 otherDf <- data.frame(stateName, stateArea, stateCenter)     #merging above three datasets to form a dataframe
-View(otherDf)
+otherDf
 
 mergeDf <- merge(mergeDf, otherDf, by = "stateName")     #merging columns of arrests and states dataset with reference to stateName and pasting into a new dataset
 View(mergeDf)
