@@ -18,13 +18,15 @@ MergedData
 
 #2)	Add the area of each state, and the center of each state, to the merged dataframe, 
 #using the ‘state.center’, ‘state.center’ and ‘state.name’ vectors
-stateName <- dfCleanCensus.name     #getting all state names
-stateArea<-CensusData.area      #getting all state areas
-stateCenter <- CensusData.center     #getting coordinates of the centers of all states
+stateName <- state.name     #getting all state names
+stateArea<-state.area      #getting all state areas
+stateCenter <- state.center     #getting coordinates of the centers of all states
 
 otherDf <- data.frame(stateName, stateArea, stateCenter)     #merging above three datasets to form a dataframe
 View(otherDf)
 
-mergeDf <- merge(MergedData, otherDf, by = "stateName")     #merging columns of arrests and states dataset with reference to stateName and pasting into a new dataset
+mergeDf <- merge(mergeDf, otherDf, by = "stateName")     #merging columns of arrests and states dataset with reference to stateName and pasting into a new dataset
 View(mergeDf)
 
+mergeDf$stateName <- tolower(mergeDf$stateName)     #converting all state names to lower case because R cannot process capital letters
+View(mergeDf)
