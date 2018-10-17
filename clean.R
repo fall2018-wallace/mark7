@@ -20,7 +20,7 @@ readStates <- function(states)
 
 
 states <- readStates(raw_data)
-str(cleanCensus)
+str(states)
 
 
 arrests <- USArrests                                      #Storing a dataset into a new variable
