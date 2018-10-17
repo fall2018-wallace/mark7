@@ -96,8 +96,11 @@
         },
         {
             "name": "USmurCir.png"
+        },
+        {
+            "name": "USzoom.png"
         }
     ],
-    "updated_at": "2018-10-17 20:47:15",
+    "updated_at": "2018-10-17 20:50:09",
     "url": "https://github.com/fall2018-wallace/mark7"
 }
