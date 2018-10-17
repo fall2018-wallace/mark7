@@ -30,3 +30,7 @@ USmurCir <- USmur + geom_point(data = mergeDf, aes(x = mergeDf$x, y= mergeDf$y, 
 latlon <- geocode("new york city, ny", source = "dsk")     #getting the latitude and longitude of an address. source attribute hold the source of the geocodes
 USzoom <- ggplot(mergeDf,aes(map_id = stateName)) + geom_map(map= us, aes(fill = Murder)) + expand_limits(x= mergeDf$x,  y= mergeDf$y) + coord_map() + ggtitle("Zoomed map of United States") 
 USzoom <- USzoom + xlim(latlon$lon-10,latlon$lon+10) + ylim(latlon$lat-10, latlon$lat+10)     #Observations not in range will be dropped completely
+
+
+
+USzoomCirc <- USzoom + geom_point(data = mergeDf, aes(x = mergeDf$x, y= mergeDf$y, color = "red", size = mergeDf$population))     #geom_point() plots points at the center of every state. size attribute controls the size of the points
