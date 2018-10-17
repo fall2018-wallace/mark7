@@ -1,0 +1,129 @@
+{
+    "collaborators": [
+        "mfurtado"
+    ],
+    "created_at": "2018-10-11 17:16:06",
+    "edges": [
+        {
+            "ports": [
+                {
+                    "input": "raw_data",
+                    "type": "csv"
+                }
+            ],
+            "source": "scprc_est_2017_18_pop_res.csv",
+            "target": "clean.R"
+        },
+        {
+            "ports": [
+                {
+                    "input": "dfCleanCensus",
+                    "output": "cleanCensus",
+                    "type": "r_obj"
+                }
+            ],
+            "source": "clean.R",
+            "target": "merge.R"
+        },
+        {
+            "ports": [
+                {
+                    "input": "mergeDf",
+                    "output": "mergeDf",
+                    "type": "r_obj"
+                }
+            ],
+            "source": "merge.R",
+            "target": "Mapper1.R"
+        },
+        {
+            "ports": [
+                {
+                    "output": "USmap",
+                    "type": "png"
+                }
+            ],
+            "source": "Mapper1.R",
+            "target": "USmap.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "USmur",
+                    "type": "png"
+                }
+            ],
+            "source": "Mapper1.R",
+            "target": "USmur.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "USmurCir",
+                    "type": "png"
+                }
+            ],
+            "source": "Mapper1.R",
+            "target": "USmurCir.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "USzoom",
+                    "type": "png"
+                }
+            ],
+            "source": "Mapper1.R",
+            "target": "USzoom.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "USzoomCirc",
+                    "type": "png"
+                }
+            ],
+            "source": "Mapper1.R",
+            "target": "USzoomCirc.png"
+        }
+    ],
+    "nodes": [
+        {
+            "name": "scprc_est_2017_18_pop_res.csv"
+        },
+        {
+            "assigned_to": "mfurtado",
+            "name": "clean.R",
+            "task_status": "in progress"
+        },
+        {
+            "assigned_to": "mfurtado",
+            "desc": "",
+            "name": "merge.R",
+            "task_status": "in progress"
+        },
+        {
+            "assigned_to": "mfurtado",
+            "desc": "",
+            "name": "Mapper1.R",
+            "task_status": "in progress"
+        },
+        {
+            "name": "USmap.png"
+        },
+        {
+            "name": "USmur.png"
+        },
+        {
+            "name": "USmurCir.png"
+        },
+        {
+            "name": "USzoom.png"
+        },
+        {
+            "name": "USzoomCirc.png"
+        }
+    ],
+    "updated_at": "2018-10-17 20:54:14",
+    "url": "https://github.com/fall2018-wallace/mark7"
+}
