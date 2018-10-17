@@ -35,6 +35,16 @@
             ],
             "source": "merge.R",
             "target": "Mapper1.R"
+        },
+        {
+            "ports": [
+                {
+                    "output": "USmap",
+                    "type": "png"
+                }
+            ],
+            "source": "Mapper1.R",
+            "target": "USmap.png"
         }
     ],
     "nodes": [
@@ -62,6 +72,6 @@
             "name": "USmap.png"
         }
     ],
-    "updated_at": "2018-10-17 20:46:31",
+    "updated_at": "2018-10-17 20:46:38",
     "url": "https://github.com/fall2018-wallace/mark7"
 }
