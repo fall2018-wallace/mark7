@@ -13,6 +13,17 @@
             ],
             "source": "scprc_est_2017_18_pop_res.csv",
             "target": "clean.R"
+        },
+        {
+            "ports": [
+                {
+                    "input": "dfCleanCensus",
+                    "output": "cleanCensus",
+                    "type": "r_obj"
+                }
+            ],
+            "source": "clean.R",
+            "target": "merge.R"
         }
     ],
     "nodes": [
@@ -25,10 +36,12 @@
             "task_status": "in progress"
         },
         {
+            "assigned_to": "mfurtado",
             "desc": "",
-            "name": "merge.R"
+            "name": "merge.R",
+            "task_status": "in progress"
         }
     ],
-    "updated_at": "2018-10-17 20:03:09",
+    "updated_at": "2018-10-17 20:04:20",
     "url": "https://github.com/fall2018-wallace/mark7"
 }
