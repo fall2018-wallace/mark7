@@ -75,6 +75,16 @@
             ],
             "source": "Mapper1.R",
             "target": "USzoom.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "USzoomCirc",
+                    "type": "png"
+                }
+            ],
+            "source": "Mapper1.R",
+            "target": "USzoomCirc.png"
         }
     ],
     "nodes": [
@@ -114,6 +124,6 @@
             "name": "USzoomCirc.png"
         }
     ],
-    "updated_at": "2018-10-17 20:54:05",
+    "updated_at": "2018-10-17 20:54:14",
     "url": "https://github.com/fall2018-wallace/mark7"
 }
