@@ -24,6 +24,17 @@
             ],
             "source": "clean.R",
             "target": "merge.R"
+        },
+        {
+            "ports": [
+                {
+                    "input": "mergeDf",
+                    "output": "mergeDf",
+                    "type": "r_obj"
+                }
+            ],
+            "source": "merge.R",
+            "target": "Mapper1.R"
         }
     ],
     "nodes": [
@@ -42,10 +53,12 @@
             "task_status": "in progress"
         },
         {
+            "assigned_to": "mfurtado",
             "desc": "",
-            "name": "Mapper1.R"
+            "name": "Mapper1.R",
+            "task_status": "in progress"
         }
     ],
-    "updated_at": "2018-10-17 20:08:36",
+    "updated_at": "2018-10-17 20:34:27",
     "url": "https://github.com/fall2018-wallace/mark7"
 }
