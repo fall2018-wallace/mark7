@@ -24,3 +24,6 @@ stateCenter <- CensusData.center     #getting coordinates of the centers of all 
 otherDf <- data.frame(stateName, stateArea, stateCenter)     #merging above three datasets to form a dataframe
 View(otherDf)
 
+mergeDf <- merge(MergedData, otherDf, by = "stateName")     #merging columns of arrests and states dataset with reference to stateName and pasting into a new dataset
+View(mergeDf)
+
