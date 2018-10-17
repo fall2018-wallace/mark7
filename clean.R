@@ -24,11 +24,11 @@ str(cleanCensus)
 
 
 arrests <- USArrests                                      #Storing a dataset into a new variable
-View(arrests)
+arrests
 
 arrests$stateName <- rownames(arrests)     #Copying rownames of arrests and pasting in a new column in arrests dataset
 mergeDf <- merge(cleanCensus, arrests, by = "stateName")     #merging columns of arrests and states dataset with reference to stateName and pasting into a new dataset
-View(mergeDf)
+mergeDf
 
 #2)	Add the area of each state, and the center of each state, to the merged dataframe, 
 #using the ‘state.center’, ‘state.center’ and ‘state.name’ vectors
