@@ -25,8 +25,8 @@ stateCenter <- state.center     #getting coordinates of the centers of all state
 otherDf <- data.frame(stateName, stateArea, stateCenter)     #merging above three datasets to form a dataframe
 otherDf
 
-mergeDf <- merge(mergeDf, otherDf, by = "stateName")     #merging columns of arrests and states dataset with reference to stateName and pasting into a new dataset
-View(mergeDf)
+mergeDf <- merge(MergedData, otherDf, by = "stateName")     #merging columns of arrests and states dataset with reference to stateName and pasting into a new dataset
+mergeDf
 
 mergeDf$stateName <- tolower(mergeDf$stateName)     #converting all state names to lower case because R cannot process capital letters
 View(mergeDf)
