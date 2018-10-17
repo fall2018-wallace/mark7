@@ -19,7 +19,7 @@ readStates <- function(states)
 }
 
 
-cleanCensus <- readStates(raw_data)
+states <- readStates(raw_data)
 str(cleanCensus)
 
 
@@ -27,12 +27,12 @@ arrests <- USArrests                                      #Storing a dataset int
 arrests
 
 arrests$stateName <- rownames(arrests)     #Copying rownames of arrests and pasting in a new column in arrests dataset
-mergeDf <- merge(cleanCensus, arrests, by = "stateName")     #merging columns of arrests and states dataset with reference to stateName and pasting into a new dataset
+mergeDf <- merge(states, arrests, by = "stateName")     #merging columns of arrests and states dataset with reference to stateName and pasting into a new dataset
 mergeDf
 
 #2)	Add the area of each state, and the center of each state, to the merged dataframe, 
 #using the ‘state.center’, ‘state.center’ and ‘state.name’ vectors
-stateName <- state.name     #getting all state names
+stateName <- states.name     #getting all state names
 stateArea<-state.area      #getting all state areas
 stateCenter <- state.center     #getting coordinates of the centers of all states
 
