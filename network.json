@@ -55,6 +55,16 @@
             ],
             "source": "Mapper1.R",
             "target": "USmur.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "USmurCir",
+                    "type": "png"
+                }
+            ],
+            "source": "Mapper1.R",
+            "target": "USmurCir.png"
         }
     ],
     "nodes": [
@@ -88,6 +98,6 @@
             "name": "USmurCir.png"
         }
     ],
-    "updated_at": "2018-10-17 20:47:08",
+    "updated_at": "2018-10-17 20:47:15",
     "url": "https://github.com/fall2018-wallace/mark7"
 }
