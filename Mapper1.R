@@ -7,7 +7,7 @@ us <- map_data("state")     #turn data from the maps package in to a data frame 
 USmap <- ggplot(mergeDf, aes(map_id = stateName))    
 USmap <- USmap + geom_map(map = us, aes(fill= stateArea))     #creating a map visualization
 USmap <- USmap + expand_limits(x = mergeDf$x, y= mergeDf$y)     #defining the x and y axes values of the map
-USmap <- USmap + coord_map() + ggtitle("Map of US based on state area")     #coord_map() handles the distortion and aspect ratio of the map. ggtitle() gives a title to the map
+USmap <- USmap + coord_map() + ggtitle("Map of US based on state area")     #ggtitle() gives title to the map
 
 
 #Step C: Create a color shaded map of the U.S. based on the Murder rate for each state 
@@ -27,7 +27,7 @@ USmurCir <- USmur + geom_point(data = mergeDf, aes(x = mergeDf$x, y= mergeDf$y, 
 #6)	Repeat step C, but only show the states in the north east
 #Hint: get the lat and lon of new york city
 #Hint: set the xlim and ylim to NYC +/- 10
-latlon <- geocode("new york city, ny", source = "dsk")     #getting the latitude and longitude of an address. source attribute hold the source of the geocodes
+latlon <- geocode("new york city, ny", source = "dsk")     #getting the latitude and longitude of an address. Source attribute hold the source of the geocodes
 USzoom <- ggplot(mergeDf,aes(map_id = stateName)) + geom_map(map= us, aes(fill = Murder)) + expand_limits(x= mergeDf$x,  y= mergeDf$y) + coord_map() + ggtitle("Zoomed map of United States") 
 USzoom <- USzoom + xlim(latlon$lon-10,latlon$lon+10) + ylim(latlon$lat-10, latlon$lat+10)     #Observations not in range will be dropped completely
 
